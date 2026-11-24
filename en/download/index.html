@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en" data-light-theme="light" data-dark-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Download Matt da Midd, a free card game for iPhone and iPad." />
+    <meta name="author" content="Roland Schmitz" />
+    <meta name="generator" content="Ignite v0.6.9" />
+    <title>Download Matt da Midd – Matt da Midd</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://mattdamidd.github.io/en/download/" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Matt da Midd" />
+    <meta property="og:title" content="Download Matt da Midd" />
+    <meta name="twitter:title" content="Download Matt da Midd" />
+    <meta property="og:description" content="Download Matt da Midd, a free card game for iPhone and iPad." />
+    <meta name="twitter:description" content="Download Matt da Midd, a free card game for iPhone and iPad." />
+    <meta property="og:url" content="https://mattdamidd.github.io/en/download/" />
+    <meta name="twitter:domain" content="mattdamidd.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="alternate" hreflang="en" href="https://mattdamidd.github.io/en/download/" />
+    <link rel="alternate" hreflang="de" href="https://mattdamidd.github.io/de/download/" />
+    <link rel="alternate" hreflang="x-default" href="https://mattdamidd.github.io/" />
+  </head>
+  <body class="container">
+    <div class="py-3 mb-4">
+      <a href="/en/" class="fs-4 me-4">Matt da Midd</a>
+      <a href="/en/download/" class="me-3">Download</a>
+      <a href="/en/support/">Support</a>
+    </div>
+    <div class="ig-main-content">
+      <h1>Download Matt da Midd</h1>
+      <p>Matt da Midd is free, without in-app purchases, subscriptions or ads.</p>
+      <p>For iPhone and iPad.</p>
+      <p class="lead">Matt da Midd is not in the App Store yet. It is coming soon.</p>
+    </div>
+    <hr />
+    <div class="py-3">
+      <a href="/en/privacy/" class="me-3">Privacy</a>
+      <a href="/en/imprint/" class="me-3">Imprint</a>
+      <a href="/en/support/" class="me-4">Support</a>
+      <a hreflang="de" lang="de" onclick="try{localStorage.setItem('language','de')}catch(e){}" href="/de/download/">Deutsch</a>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

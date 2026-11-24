@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en" data-light-theme="light" data-dark-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="In short: the app collects no data about you, and this website uses no cookies, no analytics and no external services." />
+    <meta name="author" content="Roland Schmitz" />
+    <meta name="generator" content="Ignite v0.6.9" />
+    <title>Privacy Policy – Matt da Midd</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://mattdamidd.github.io/en/privacy" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Matt da Midd" />
+    <meta property="og:title" content="Privacy Policy" />
+    <meta name="twitter:title" content="Privacy Policy" />
+    <meta property="og:description" content="In short: the app collects no data about you, and this website uses no cookies, no analytics and no external services." />
+    <meta name="twitter:description" content="In short: the app collects no data about you, and this website uses no cookies, no analytics and no external services." />
+    <meta property="og:url" content="https://mattdamidd.github.io/en/privacy" />
+    <meta name="twitter:domain" content="mattdamidd.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="alternate" hreflang="en" href="https://mattdamidd.github.io/en/privacy/" />
+    <link rel="alternate" hreflang="de" href="https://mattdamidd.github.io/de/privacy/" />
+    <link rel="alternate" hreflang="x-default" href="https://mattdamidd.github.io/" />
+  </head>
+  <body class="container">
+    <div class="py-3 mb-4">
+      <a href="/en/" class="fs-4 me-4">Matt da Midd</a>
+      <a href="/en/download/" class="me-3">Download</a>
+      <a href="/en/support/">Support</a>
+    </div>
+    <div class="ig-main-content">
+      <h1>Privacy Policy</h1>
+      <p></p>
+      <p>In short: the app collects no data about you, and this website uses no cookies, no analytics and no external services.</p>
+      <p>Roland Schmitz, Schubertstraße 30, 52146 Würselen, Germany. Email: mattdamidd @ 2rs.de.</p>
+      <h2>The app</h2>
+      <p><em>Matt da Midd</em> does not collect, store or send any personal data to the provider or to third parties. It has no account, no advertising, no analytics and no tracking.</p>
+      <p><strong>Stored on your device only.</strong> The app saves your player name, its settings and the state of your matches on your device. This data never leaves your device, except as described below for multiplayer. You can remove it by deleting the app.</p>
+      <p><strong>Multiplayer on the local network.</strong> If you turn multiplayer on, the app finds and talks to other devices running the app on the same local network (Wi-Fi). iOS asks you for the permission “Local Network” the first time. The devices exchange your player name and the moves of the match directly with each other. No server is involved, and nothing is sent over the internet. Other players in your match can see your player name. You can turn multiplayer off at any time in the settings, and the app then does not use the network at all.</p>
+      <p><strong>No other data.</strong> The app does not use your location, contacts, photos, microphone or camera, and it does not read your device identifiers.</p>
+      <h2>This website</h2>
+      <p>The website is hosted by GitHub Pages (GitHub Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA). When you open a page, GitHub’s servers process technical connection data such as your IP address, the time of the request and the browser type, and they may keep it in server logs. The provider of this website has no access to these logs. The legal basis is our legitimate interest in showing you the website (Art. 6 (1) (f) GDPR). Data may be processed in the USA. Please see GitHub’s privacy statement for details.</p>
+      <p>The website sets no cookies, uses no analytics or tracking, and loads no fonts or scripts from other servers. When you choose a language with the language link, your browser stores that choice in its local storage on your device, so that the start page can open the right language next time. This is a purely technical setting and is not sent to anyone.</p>
+      <h2>Contact by email</h2>
+      <p>If you write to mattdamidd @ 2rs.de, we use your email address and your message only to answer you, and delete them when the matter is settled, unless we have to keep them by law.</p>
+      <h2>Your rights</h2>
+      <p>You have the right to information about your data, to correction, deletion, restriction of processing, to object and to data portability under the GDPR. Please contact mattdamidd @ 2rs.de. You also have the right to complain to a data protection supervisory authority, for example the Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestraße 2–4, 40213 Düsseldorf, Germany.</p>
+      <p>Last updated: 2026</p>
+      <p></p>
+    </div>
+    <hr />
+    <div class="py-3">
+      <a href="/en/privacy/" class="me-3">Privacy</a>
+      <a href="/en/imprint/" class="me-3">Imprint</a>
+      <a href="/en/support/" class="me-4">Support</a>
+      <a hreflang="de" lang="de" onclick="try{localStorage.setItem('language','de')}catch(e){}" href="/de/privacy/">Deutsch</a>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

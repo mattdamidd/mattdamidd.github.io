@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="de" data-light-theme="light" data-dark-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Roland SchmitzSchubertstraße 3052146 WürselenDeutschland" />
+    <meta name="author" content="Roland Schmitz" />
+    <meta name="generator" content="Ignite v0.6.9" />
+    <title>Impressum – Matt da Midd</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://mattdamidd.github.io/de/imprint" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Matt da Midd" />
+    <meta property="og:title" content="Impressum" />
+    <meta name="twitter:title" content="Impressum" />
+    <meta property="og:description" content="Roland SchmitzSchubertstraße 3052146 WürselenDeutschland" />
+    <meta name="twitter:description" content="Roland SchmitzSchubertstraße 3052146 WürselenDeutschland" />
+    <meta property="og:url" content="https://mattdamidd.github.io/de/imprint" />
+    <meta name="twitter:domain" content="mattdamidd.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="alternate" hreflang="en" href="https://mattdamidd.github.io/en/imprint/" />
+    <link rel="alternate" hreflang="de" href="https://mattdamidd.github.io/de/imprint/" />
+    <link rel="alternate" hreflang="x-default" href="https://mattdamidd.github.io/" />
+  </head>
+  <body class="container">
+    <div class="py-3 mb-4">
+      <a href="/de/" class="fs-4 me-4">Matt da Midd</a>
+      <a href="/de/download/" class="me-3">Download</a>
+      <a href="/de/support/">Support</a>
+    </div>
+    <div class="ig-main-content">
+      <h1>Impressum</h1>
+      <p></p>
+      <p>Roland Schmitz<br />Schubertstraße 30<br />52146 Würselen<br />Deutschland</p>
+      <h2>Kontakt</h2>
+      <p>E-Mail: mattdamidd @ 2rs.de<br />Telefon: +49 178 9814466</p>
+      <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
+      <p>Roland Schmitz, Anschrift wie oben.</p>
+      <h2>Zu dieser Website</h2>
+      <p>Dies ist eine private, nicht kommerzielle Website für die kostenlose App <em>Matt da Midd</em>. Sie enthält keine Werbung und kein Tracking.</p>
+      <p></p>
+    </div>
+    <hr />
+    <div class="py-3">
+      <a href="/de/privacy/" class="me-3">Datenschutz</a>
+      <a href="/de/imprint/" class="me-3">Impressum</a>
+      <a href="/de/support/" class="me-4">Support</a>
+      <a hreflang="en" lang="en" onclick="try{localStorage.setItem('language','en')}catch(e){}" href="/en/imprint/">English</a>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>

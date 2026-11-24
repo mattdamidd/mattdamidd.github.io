@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-light-theme="light" data-dark-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Questions, problems or ideas? Write to mattdamidd @ 2rs.de." />
+    <meta name="author" content="Roland Schmitz" />
+    <meta name="generator" content="Ignite v0.6.9" />
+    <title>Support – Matt da Midd</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/bootstrap-icons.min.css" rel="stylesheet" />
+    <link href="/css/ignite-core.min.css" rel="stylesheet" />
+    <link href="https://mattdamidd.github.io/en/support" rel="canonical" />
+    <script>(function() {
+    function getThemePreference() {
+        return localStorage.getItem('custom-theme') || 'auto';
+    }
+
+    function applyTheme(themeID) {
+        const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+        const lightThemeID = document.documentElement.getAttribute('data-light-theme') || 'light';
+        const darkThemeID = document.documentElement.getAttribute('data-dark-theme') || 'dark';
+        const actualThemeID = themeID === 'auto' ? (prefersDark ? darkThemeID : lightThemeID) : themeID;
+
+        document.documentElement.setAttribute('data-bs-theme', actualThemeID);
+        document.documentElement.setAttribute('data-theme-state', themeID);
+    }
+
+    function applySyntaxTheme() {
+        const syntaxTheme = getComputedStyle(document.documentElement)
+            .getPropertyValue('--syntax-highlight-theme').trim().replace(/"/g, '');
+
+        if (!syntaxTheme) return;
+
+        document.querySelectorAll('link[data-highlight-theme]').forEach(link => {
+            link.setAttribute('disabled', 'disabled');
+        });
+
+        const themeLink = document.querySelector(`link[data-highlight-theme="${syntaxTheme}"]`);
+        if (themeLink) {
+            themeLink.removeAttribute('disabled');
+        }
+    }
+
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
+        const currentTheme = getThemePreference();
+        if (currentTheme === 'auto') {
+            applyTheme('auto');
+            applySyntaxTheme();
+        }
+    });
+
+    const savedTheme = getThemePreference();
+    applyTheme(savedTheme);
+    applySyntaxTheme();
+})();
+</script>
+    <meta property="og:site_name" content="Matt da Midd" />
+    <meta property="og:title" content="Support" />
+    <meta name="twitter:title" content="Support" />
+    <meta property="og:description" content="Questions, problems or ideas? Write to mattdamidd @ 2rs.de." />
+    <meta name="twitter:description" content="Questions, problems or ideas? Write to mattdamidd @ 2rs.de." />
+    <meta property="og:url" content="https://mattdamidd.github.io/en/support" />
+    <meta name="twitter:domain" content="mattdamidd.github.io" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:dnt" content="on" />
+    <meta name="format-detection" content="telephone=no" />
+    <link rel="alternate" hreflang="en" href="https://mattdamidd.github.io/en/support/" />
+    <link rel="alternate" hreflang="de" href="https://mattdamidd.github.io/de/support/" />
+    <link rel="alternate" hreflang="x-default" href="https://mattdamidd.github.io/" />
+  </head>
+  <body class="container">
+    <div class="py-3 mb-4">
+      <a href="/en/" class="fs-4 me-4">Matt da Midd</a>
+      <a href="/en/download/" class="me-3">Download</a>
+      <a href="/en/support/">Support</a>
+    </div>
+    <div class="ig-main-content">
+      <h1>Support</h1>
+      <p></p>
+      <p>Questions, problems or ideas? Write to mattdamidd @ 2rs.de.</p>
+      <p>To report a bug, please include:</p>
+      <ul>
+        <li>what you did and what you expected to happen</li>
+        <li>what happened instead</li>
+        <li>your device (for example iPhone 16) and the iOS version</li>
+        <li>the language of the app, English or German</li>
+      </ul>
+      <h2>Frequently asked questions</h2>
+      <h3>How do I play?</h3>
+      <p>Open the rules from the lobby. They explain the cards, the Midd, trump and scoring.</p>
+      <h3>Multiplayer does not find the other devices</h3>
+      <ul>
+        <li>All devices must be on the same Wi-Fi network.</li>
+        <li>Multiplayer must be turned on in the settings of every device.</li>
+        <li>iOS must allow the app to use the local network: open Settings, Privacy &amp; Security, Local Network, and turn on Matt da Midd.</li>
+        <li>Some guest or public Wi-Fi networks stop devices from seeing each other. Try another network.</li>
+      </ul>
+      <h3>Does the app work without internet?</h3>
+      <p>Yes. The solo match needs no network. Multiplayer needs a local Wi-Fi network, but no internet connection.</p>
+      <h3>What data does the app collect?</h3>
+      <p>None. See the <a href="/en/privacy/">privacy policy</a>.</p>
+      <h3>What does a match consist of?</h3>
+      <p>A match is one or more games with the same players. A game is played over several rounds until one team has struck out all its score lines. After a game you can continue with the same players or end the match.</p>
+      <p></p>
+    </div>
+    <hr />
+    <div class="py-3">
+      <a href="/en/privacy/" class="me-3">Privacy</a>
+      <a href="/en/imprint/" class="me-3">Imprint</a>
+      <a href="/en/support/" class="me-4">Support</a>
+      <a hreflang="de" lang="de" onclick="try{localStorage.setItem('language','de')}catch(e){}" href="/de/support/">Deutsch</a>
+    </div>
+    <script src="/js/bootstrap.bundle.min.js"></script>
+    <script src="/js/ignite-core.js"></script>
+  </body>
+</html>
